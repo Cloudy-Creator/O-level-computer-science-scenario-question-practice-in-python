@@ -1,0 +1,81 @@
+#Code in python
+import math
+
+#initiating lists
+
+Customers = [0] * 100
+Quotations = [[0, 0, 0, 0, 0]]
+WoodType = ["Laminate", "Pine", "Oak"]
+Price = [29.99, 39.99, 54.99]
+
+#looping 100 times, starting from 0
+
+for index in range(100):
+    
+    #taking customer name
+    
+    Customers[index] = input("Please enter your name:")
+    print()
+    
+    #taking length with validation check
+    
+    length = float(input("Enter your room length:"))
+    print()
+    
+    while length < 1.5 or length > 10.0:
+        length = float(input("Length must be between 1.5 and 10.0 inclusive,  Please Re-enter:"))
+        print()
+    length = round(length, 1)
+    
+    #taking width with validation check
+    
+    width = float(input("Enter your room width:"))
+    print()
+    
+    while width < 1.5 or width > 10.0:
+        width = float(input("Width must be between 1.5 and 10.0 inclusive,  Please Re-enter:"))
+        print()
+    width = round(width, 1)
+    
+    #finding area
+    
+    area = length * width
+    area = math.ceil(area)
+    
+    #Displaying available wood types with prices
+    
+    for i in range (3):
+        print("Wood type:", WoodType[i], "Price:", Price[i], "Enter :", i+1)
+    print()
+    
+    #taking wood choice with validation check
+        
+    woodIndex = int(input("Please your wood choice in 1, 2, or 3:"))
+    while woodIndex < 1 or woodIndex > 3:
+        woodIndex = int(input("Your choice must be 1,2, or 3:"))
+        print()
+    
+    #calculating price
+        
+    price = Price[woodIndex - 1]
+    totalPrice = price * area
+    totalPrice = round(totalPrice, 2)
+    
+    #storing data in lists
+    
+    Quotations[index][0] = length
+    Quotations[index][1] = width
+    Quotations[index][2] = area
+    Quotations[index][3] = woodIndex
+    Quotations[index][4] = totalPrice
+    
+    #displaying name, wood choice and the total price
+    
+    print("Customer name is:", Customers[index])
+    print("Wood choice is:", WoodType[woodIndex - 1])
+    print("Total price is:", totalPrice)
+    print()
+    
+    
+    
+    
