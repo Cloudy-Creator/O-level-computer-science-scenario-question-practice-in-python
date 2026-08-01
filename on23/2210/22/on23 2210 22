@@ -1,42 +1,4 @@
-""" Question Statement: 
-A wood flooring company stores the names of up to 100 customers in a one‑dimensional (1D) array
-Customers[]. A two‑dimensional (2D) array Quotations[] stores details of each customer’s
-quotation:
-• length of room (one decimal place)
-• width of room (one decimal place)
-• area of wood required (rounded up to next whole number)
-• choice of wood index (whole number)
-• price of wood required in dollars (two decimal places).
-The floor measurements (room length and room width) are taken in metres. All floors are rectangles
-and room measurements must be between 1.5 and 10.0 inclusive.
-The index of any customer’s data is the same in both arrays. For example, a customer named in
-index 4 of Customers[] corresponds to the data in index 4 of Quotations[]
-The wood choices available are:
-Index Wood type Price per square metre ($)
-1 Laminate 29.99
-2 Pine 39.99
-3 Oak 54.99
-The data are stored in two 1D arrays named WoodType[] and Price[]. The index of the wood
-type and price in their arrays share the same index number.
-Write a program that meets the following requirements:
-• input a new customer’s name, room length and room width
-• check that each measurement is valid
-• output an error message and require the measurement to be re‑entered until it is valid
-• calculate the area of the room by multiplying together the length of the room and the width of
-the room
-• input the choice of wood and find its price per square metre
-• calculate the price of the wood needed
-• store all data in the relevant array
-• output the customer’s quotation to include: the name of the customer, the choice of wood and
-the calculated price of the wood required
-• continue to accept the next customer.
-You must use pseudocode or program code and add comments to explain how your code works.
-You do not need to declare any arrays or variables; you may assume that this has already been
-done.
-You will need to initialise WoodType[] and Price[]
-All inputs and outputs must contain suitable messages.
- ...............................................................................................................................................
-"""
+ 
 
 
 
